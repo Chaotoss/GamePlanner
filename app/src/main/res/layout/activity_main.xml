@@ -19,6 +19,7 @@
 
     <EditText
         android:id="@+id/email"
+        android:hint="Email Address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -30,6 +31,7 @@
 
     <EditText
         android:id="@+id/password"
+        android:hint="Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

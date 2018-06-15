@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">Game Planner</string>
     <string name="LoginTxt">Login</string>
+    <string-array name="Game">
+        <item>Stick Fight</item>
+        <item>League of Legends</item>
+        <item>PlayerUnknown Battlegrounds</item>
+        <item>Totally Acurate Battlegrounds</item>
+        <item>Stellaris</item>
+        <item>Dark Souls Remastered</item>
+    </string-array>
+    <string-array name="day">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string-array name="ToD">
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+    </string-array>
 </resources>

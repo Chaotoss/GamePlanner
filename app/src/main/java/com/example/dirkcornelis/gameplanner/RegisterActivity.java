@@ -15,10 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    TextView username;
-    TextView email;
-    TextView password;
-    TextView password2;
+    TextView username, email, password, password2;
     Button registerBtn;
 
     @Override
@@ -36,28 +33,28 @@ public class RegisterActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Email = email.getText().toString();
-                String Password = password.getText().toString();
-                String Password2 = password2.getText().toString();
+                String Email = email.getText().toString().trim();
+                String Password = password.getText().toString().trim();
+                String Password2 = password2.getText().toString().trim();
 
                 if (TextUtils.isEmpty(Email)){
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (TextUtils.isEmpty(Password)){
-                    Toast.makeText(getApplicationContext(), "Enter email password!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_LONG).show();
                     return;
                 }
-                if (Password != Password2){
-                    Toast.makeText(getApplicationContext(), "Check of your passwords are the same", Toast.LENGTH_LONG).show();
+                if (!Password.equals(Password2)){
+                    Toast.makeText(getApplicationContext(), "Passwords are not the same", Toast.LENGTH_LONG).show();
                     return;
                 }
 
                 mAuth.createUserWithEmailAndPassword(Email, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-//                        Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
-//                        startActivity(intent);
+                        Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                        startActivity(intent);
                     }
                 });
             }
