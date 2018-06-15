@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "302722416187",
+    "firebase_url": "https://gameplanner-f2869.firebaseio.com",
+    "project_id": "gameplanner-f2869",
+    "storage_bucket": "gameplanner-f2869.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302722416187:android:ed73d1fafa485d60",
+        "android_client_info": {
+          "package_name": "com.example.dirkcornelis.gameplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302722416187-sq9mfvlg42eaabea74jgjt6l2hsj5k1u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dirkcornelis.gameplanner",
+            "certificate_hash": "43b69a017cf13603fa9b6053090c33e201acfa01"
+          }
+        },
+        {
+          "client_id": "302722416187-i801jqhkrl6v06siv2vcn5t3ap1pnctn.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "302722416187-i801jqhkrl6v06siv2vcn5t3ap1pnctn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPsstH9MQoZbz4L2UECgy66R0lWE6Dxvc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302722416187-i801jqhkrl6v06siv2vcn5t3ap1pnctn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
