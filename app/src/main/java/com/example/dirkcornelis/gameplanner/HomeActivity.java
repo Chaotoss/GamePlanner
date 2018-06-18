@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class HomeActivity extends AppCompatActivity {
     Button createBtn, viewBtn, profileBtn;
@@ -17,6 +21,14 @@ public class HomeActivity extends AppCompatActivity {
         createBtn = findViewById(R.id.createBtn);
         viewBtn = findViewById(R.id.viewBtn);
         profileBtn = findViewById(R.id.profileBtn);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user == null){
+            Intent notLoggedIntent = new Intent(HomeActivity.this, MainActivity.class);
+            startActivity(notLoggedIntent);
+        }else{
+            Toast.makeText(getApplicationContext(), "User: " + user, Toast.LENGTH_LONG).show();
+        }
 
 
         createBtn.setOnClickListener(new View.OnClickListener() {

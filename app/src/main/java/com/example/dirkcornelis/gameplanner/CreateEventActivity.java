@@ -28,11 +28,16 @@ public class CreateEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event);
 
-
         GameSpinner = findViewById(R.id.gameSpinner);
         DaySpinner = findViewById(R.id.daySpinner);
         ToDSpinner = findViewById(R.id.ToDSpinner);
         createEventBtn = findViewById(R.id.createEventBtn);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user == null){
+            Intent notLoggedIntent = new Intent(CreateEventActivity.this, MainActivity.class);
+            startActivity(notLoggedIntent);
+        }
 
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Events");
