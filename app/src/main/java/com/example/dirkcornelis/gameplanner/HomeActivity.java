@@ -42,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         viewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent viewEventsIntent = new Intent(HomeActivity.this, CreateEventActivity.class);
+                Intent viewEventsIntent = new Intent(HomeActivity.this, ViewActivity.class);
                 startActivity(viewEventsIntent);
             }
         });
@@ -50,8 +50,8 @@ public class HomeActivity extends AppCompatActivity {
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent viewProfileIntent = new Intent(HomeActivity.this, CreateEventActivity.class);
-                startActivity(viewProfileIntent);
+                Intent viewPopulairIntent = new Intent(HomeActivity.this, PopulairActivity.class);
+                startActivity(viewPopulairIntent);
             }
         });
     }

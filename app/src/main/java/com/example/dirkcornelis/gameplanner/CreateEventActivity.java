@@ -61,11 +61,11 @@ public class CreateEventActivity extends AppCompatActivity {
         createEventBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Game = GameSpinner.getSelectedItem().toString().trim();
-                String Day = DaySpinner.getSelectedItem().toString().trim();
-                String TimeOfDay = ToDSpinner.getSelectedItem().toString().trim();
+                String game = GameSpinner.getSelectedItem().toString().trim();
+                String day = DaySpinner.getSelectedItem().toString().trim();
+                String timeofday = ToDSpinner.getSelectedItem().toString().trim();
 
-                GameEvent gameEvent = new GameEvent(Game, Day, TimeOfDay);
+                GameEvent gameEvent = new GameEvent(game, day, timeofday);
                 databaseReference.push().setValue(gameEvent).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

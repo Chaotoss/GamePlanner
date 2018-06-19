@@ -1,43 +1,40 @@
 package com.example.dirkcornelis.gameplanner;
 
-import com.google.firebase.database.DatabaseReference;
-
 public class GameEvent {
-    public String Game;
-    public String Day;
-    public String TimeOfDay;
+    public String game;
+    public String day;
+    public String timeofday;
 
-    public GameEvent(){
+    public GameEvent() {
+    }
 
+    public GameEvent(String game, String day, String timeofday) {
+        this.game = game;
+        this.day = day;
+        this.timeofday = timeofday;
     }
 
     public String getGame() {
-        return Game;
+        return game;
     }
 
     public void setGame(String game) {
-        Game = game;
+        this.game = game;
     }
 
     public String getDay() {
-        return Day;
+        return day;
     }
 
     public void setDay(String day) {
-        Day = day;
+        this.day = day;
     }
 
-    public String getTimeOfDay() {
-        return TimeOfDay;
+    public String getTimeofday() {
+        return timeofday;
     }
 
-    public void setTimeOfDay(String timeOfDay) {
-        TimeOfDay = timeOfDay;
-    }
-
-    public GameEvent(String game, String day, String timeofday){
-        this.Game = game;
-        this.Day = day;
-        this.TimeOfDay = timeofday;
+    public void setTimeofday(String timeofday) {
+        this.timeofday = timeofday;
     }
 }
