@@ -40,30 +40,30 @@ public class MainActivity extends AppCompatActivity {
                 String Email = email.getText().toString().trim();
                 String Password = password.getText().toString().trim();
 
-                if (TextUtils.isEmpty(Email)){
+                if (TextUtils.isEmpty(Email)) {
                     Toast.makeText(getApplicationContext(), "Please fill in your Email Address", Toast.LENGTH_LONG).show();
                     return;
-                }
-
-                if (TextUtils.isEmpty(Password)){
+                }else if (TextUtils.isEmpty(Password)) {
                     Toast.makeText(getApplicationContext(), "Please fill in your Password", Toast.LENGTH_LONG).show();
                     return;
+                } else {
+                    mAuth.signInWithEmailAndPassword(Email, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+
+                        @Override
+                        public void onSuccess(AuthResult authResult) {
+                            Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            MainActivity.this.finish();
+                        }
+                    });
+                    mAuth.signInWithEmailAndPassword(Email, Password).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getApplicationContext(), "Your Email or Password is incorrect", Toast.LENGTH_LONG).show();
+                        }
+                    });
                 }
-
-                mAuth.signInWithEmailAndPassword(Email, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-
-                    @Override
-                    public void onSuccess(AuthResult authResult) {
-                        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                        startActivity(intent);
-                    }
-                });
-                mAuth.signInWithEmailAndPassword(Email, Password).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(), "Your Email or Password is incorrect", Toast.LENGTH_LONG).show();
-                    }
-                });
             }
         });
 

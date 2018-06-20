@@ -8,15 +8,16 @@
     android:layout_marginTop="4dp">
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/Constraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:elevation="4dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageLogo"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -33,32 +34,50 @@
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageLogo"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Friday"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageLogo"
             app:layout_constraintTop_toBottomOf="@+id/txtGame" />
 
         <TextView
             android:id="@+id/txtToD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="2dp"
             android:layout_marginTop="8dp"
             android:text="Evening"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtDay"
             app:layout_constraintTop_toBottomOf="@+id/txtGame" />
+
+        <TextView
+            android:id="@+id/txtPreCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Created By:"
+            android:textSize="10dp"
+            app:layout_constraintStart_toEndOf="@+id/imageLogo"
+            app:layout_constraintTop_toBottomOf="@+id/txtDay" />
+
+        <TextView
+            android:id="@+id/txtCreator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="Chaotoss"
+            android:textSize="10dp"
+            app:layout_constraintStart_toEndOf="@+id/txtPreCreate"
+            app:layout_constraintTop_toBottomOf="@+id/txtToD" />
 
 
     </android.support.constraint.ConstraintLayout>

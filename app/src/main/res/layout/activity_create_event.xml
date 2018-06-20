@@ -10,44 +10,39 @@
         android:id="@+id/gameSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/daySpinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/daySpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        app:layout_constraintBottom_toTopOf="@+id/ToDSpinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameSpinner" />
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/gameSpinner"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Spinner
         android:id="@+id/ToDSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/daySpinner" />
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/daySpinner"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/createEventBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button"
+        android:elevation="4dp"
         android:text="Create Event"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ToDSpinner" />
+        tools:layout_editor_absoluteX="0dp" />
 
 
 </android.support.constraint.ConstraintLayout>

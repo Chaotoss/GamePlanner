@@ -4,14 +4,16 @@ public class GameEvent {
     public String game;
     public String day;
     public String timeofday;
+    public String username;
 
     public GameEvent() {
     }
 
-    public GameEvent(String game, String day, String timeofday) {
+    public GameEvent(String game, String day, String timeofday, String username) {
         this.game = game;
         this.day = day;
         this.timeofday = timeofday;
+        this.username = username;
     }
 
     public String getGame() {
@@ -36,5 +38,13 @@ public class GameEvent {
 
     public void setTimeofday(String timeofday) {
         this.timeofday = timeofday;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

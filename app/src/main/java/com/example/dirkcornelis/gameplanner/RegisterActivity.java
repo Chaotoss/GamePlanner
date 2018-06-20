@@ -61,12 +61,14 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         UserModel userModel = new UserModel(Username, Email);
-                        databaseReference.push().setValue(userModel).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        databaseReference.child(mAuth.getCurrentUser().getUid()).setValue(userModel).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(getApplicationContext(), "User successfully created!", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
+                                RegisterActivity.this.finish();
                             }
                         });
                     }

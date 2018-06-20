@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Game Planner</string>
     <string name="LoginTxt">Login</string>
+    <string name="addEvent">Add Event</string>
+    <string name="Logout">Logout</string>
     <string-array name="Game">
         <item>Stick Fight</item>
         <item>League of Legends</item>
