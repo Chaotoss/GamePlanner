@@ -109,15 +109,15 @@ public class ViewActivity extends AppCompatActivity {
             if (game.equals("Stick Fight")){
                 ImageLogo.setImageResource(R.mipmap.stickfight);
             }else if (game.equals("League of Legends")){
-                ImageLogo.setImageResource(R.mipmap.stickfight);
+                ImageLogo.setImageResource(R.mipmap.leagueoflegends);
             }else if (game.equals("PlayerUnknown Battlegrounds")){
-                ImageLogo.setImageResource(R.mipmap.stickfight);
+                ImageLogo.setImageResource(R.mipmap.playerunknownbattlegrounds);
             }else if (game.equals("Totally Acurate Battlegrounds")){
-                ImageLogo.setImageResource(R.mipmap.stickfight);
+                ImageLogo.setImageResource(R.mipmap.totallyacuratebattlegrounds);
             }else if (game.equals("Stellaris")){
-                ImageLogo.setImageResource(R.mipmap.stickfight);
+                ImageLogo.setImageResource(R.mipmap.stellaris);
             }else{
-                ImageLogo.setImageResource(R.mipmap.stickfight);
+                ImageLogo.setImageResource(R.mipmap.darksoulsremastered);
             }
 
         }

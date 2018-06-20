@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Game Planner</string>
+    <string name="app_name">Gaming Planner</string>
     <string name="LoginTxt">Login</string>
     <string name="addEvent">Add Event</string>
     <string name="Logout">Logout</string>
