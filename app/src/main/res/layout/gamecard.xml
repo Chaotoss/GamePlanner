@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="4dp"
-    android:layout_marginTop="4dp">
+    app:cardUseCompatPadding="true">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/Constraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:elevation="4dp">
 
         <ImageView
